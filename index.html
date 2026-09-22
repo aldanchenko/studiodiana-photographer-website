@@ -4,36 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Diana — Photography</title>
+  <meta name="description" content="Portrait, wedding and lifestyle photography by Diana — genuine, light-filled images made with care." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="en" href="./?lang=en" />
+  <link rel="alternate" hreflang="ru" href="./?lang=ru" />
+  <link rel="alternate" hreflang="fr" href="./?lang=fr" />
+  <link rel="alternate" hreflang="x-default" href="./" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-logo">Studio Diana</div>
-    <button class="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="nav.language">
+        <button type="button" class="lang-btn" data-lang="en" lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru" lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="fr" lang="fr">FR</button>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" data-i18n-aria="nav.toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Hero -->
   <section id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-tagline">capturing moments that last forever</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">capturing moments that last forever</p>
       <h1>Studio Diana</h1>
-      <a href="#portfolio" class="btn-outline">View Portfolio</a>
+      <a href="#portfolio" class="btn-outline" data-i18n="hero.cta">View Portfolio</a>
     </div>
-    <div class="hero-scroll-hint">scroll</div>
+    <div class="hero-scroll-hint" data-i18n="hero.scroll">scroll</div>
   </section>
 
   <!-- About -->
@@ -43,23 +55,24 @@
         <img
           src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80"
           alt="Diana — photographer"
+          data-i18n-alt="about.alt"
           loading="lazy"
         />
       </div>
       <div class="about-text">
-        <span class="section-label">About me</span>
-        <h2>Hello, I'm Diana</h2>
-        <p>
+        <span class="section-label" data-i18n="about.label">About me</span>
+        <h2 data-i18n="about.title">Hello, I'm Diana</h2>
+        <p data-i18n="about.p1">
           I'm a portrait and lifestyle photographer based in the heart of the city.
           My work is rooted in genuine connection — I believe the best photographs
           happen when people feel at ease, seen, and celebrated exactly as they are.
         </p>
-        <p>
+        <p data-i18n="about.p2">
           With over eight years behind the lens, I've had the privilege of documenting
           weddings, families, and personal milestones across Europe and beyond.
           Light, emotion, and authenticity drive every frame I take.
         </p>
-        <a href="#contact" class="btn-solid">Work with me</a>
+        <a href="#contact" class="btn-solid" data-i18n="about.cta">Work with me</a>
       </div>
     </div>
   </section>
@@ -67,52 +80,52 @@
   <!-- Portfolio -->
   <section id="portfolio">
     <div class="container">
-      <span class="section-label center">Work</span>
-      <h2 class="center">Portfolio</h2>
+      <span class="section-label center" data-i18n="portfolio.label">Work</span>
+      <h2 class="center" data-i18n="portfolio.title">Portfolio</h2>
 
       <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="portrait">Portraits</button>
-        <button class="filter-btn" data-filter="wedding">Weddings</button>
-        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+        <button class="filter-btn" data-filter="portrait" data-i18n="filter.portrait">Portraits</button>
+        <button class="filter-btn" data-filter="wedding" data-i18n="filter.wedding">Weddings</button>
+        <button class="filter-btn" data-filter="lifestyle" data-i18n="filter.lifestyle">Lifestyle</button>
       </div>
 
       <div class="gallery">
         <div class="gallery-item portrait" data-src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Portrait" loading="lazy" />
-          <div class="gallery-overlay"><span>Portraits</span></div>
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Portrait" data-i18n-alt="alt.portrait" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.portrait">Portraits</span></div>
         </div>
         <div class="gallery-item wedding" data-src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding" loading="lazy" />
-          <div class="gallery-overlay"><span>Weddings</span></div>
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding" data-i18n-alt="alt.wedding" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.wedding">Weddings</span></div>
         </div>
         <div class="gallery-item lifestyle" data-src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=80" alt="Lifestyle" loading="lazy" />
-          <div class="gallery-overlay"><span>Lifestyle</span></div>
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=80" alt="Lifestyle" data-i18n-alt="alt.lifestyle" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.lifestyle">Lifestyle</span></div>
         </div>
         <div class="gallery-item portrait" data-src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Portrait" loading="lazy" />
-          <div class="gallery-overlay"><span>Portraits</span></div>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Portrait" data-i18n-alt="alt.portrait" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.portrait">Portraits</span></div>
         </div>
         <div class="gallery-item wedding" data-src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=600&q=80" alt="Wedding" loading="lazy" />
-          <div class="gallery-overlay"><span>Weddings</span></div>
+          <img src="https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=600&q=80" alt="Wedding" data-i18n-alt="alt.wedding" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.wedding">Weddings</span></div>
         </div>
         <div class="gallery-item lifestyle" data-src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Lifestyle" loading="lazy" />
-          <div class="gallery-overlay"><span>Lifestyle</span></div>
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Lifestyle" data-i18n-alt="alt.lifestyle" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.lifestyle">Lifestyle</span></div>
         </div>
         <div class="gallery-item portrait" data-src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80" alt="Portrait" loading="lazy" />
-          <div class="gallery-overlay"><span>Portraits</span></div>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80" alt="Portrait" data-i18n-alt="alt.portrait" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.portrait">Portraits</span></div>
         </div>
         <div class="gallery-item wedding" data-src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Wedding" loading="lazy" />
-          <div class="gallery-overlay"><span>Weddings</span></div>
+          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Wedding" data-i18n-alt="alt.wedding" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.wedding">Weddings</span></div>
         </div>
         <div class="gallery-item lifestyle" data-src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=1200&q=85">
-          <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80" alt="Lifestyle" loading="lazy" />
-          <div class="gallery-overlay"><span>Lifestyle</span></div>
+          <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80" alt="Lifestyle" data-i18n-alt="alt.lifestyle" loading="lazy" />
+          <div class="gallery-overlay"><span data-i18n="filter.lifestyle">Lifestyle</span></div>
         </div>
       </div>
     </div>
@@ -120,37 +133,37 @@
 
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox hidden">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
-    <button class="lightbox-next" aria-label="Next">&#8250;</button>
+    <button class="lightbox-close" aria-label="Close" data-i18n-aria="lightbox.close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous" data-i18n-aria="lightbox.prev">&#8249;</button>
+    <button class="lightbox-next" aria-label="Next" data-i18n-aria="lightbox.next">&#8250;</button>
     <div class="lightbox-img-wrap">
-      <img id="lightbox-img" src="" alt="Enlarged photo" />
+      <img id="lightbox-img" src="" alt="Enlarged photo" data-i18n-alt="alt.lightbox" />
     </div>
   </div>
 
   <!-- Services -->
   <section id="services">
     <div class="container">
-      <span class="section-label center">What I offer</span>
-      <h2 class="center">Services</h2>
+      <span class="section-label center" data-i18n="services.label">What I offer</span>
+      <h2 class="center" data-i18n="services.title">Services</h2>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">◎</div>
-          <h3>Portrait Sessions</h3>
-          <p>Individual, couples, and family portraits in studio or on location. Relaxed, guided, and entirely tailored to you.</p>
-          <p class="price">from $250</p>
+          <h3 data-i18n="services.portrait.title">Portrait Sessions</h3>
+          <p data-i18n="services.portrait.text">Individual, couples, and family portraits in studio or on location. Relaxed, guided, and entirely tailored to you.</p>
+          <p class="price" data-i18n="services.portrait.price">from $250</p>
         </div>
         <div class="service-card featured">
           <div class="service-icon">◈</div>
-          <h3>Wedding Coverage</h3>
-          <p>Full-day or half-day wedding photography. Candid moments, artful details, and memories you'll treasure forever.</p>
-          <p class="price">from $1,800</p>
+          <h3 data-i18n="services.wedding.title">Wedding Coverage</h3>
+          <p data-i18n="services.wedding.text">Full-day or half-day wedding photography. Candid moments, artful details, and memories you'll treasure forever.</p>
+          <p class="price" data-i18n="services.wedding.price">from $1,800</p>
         </div>
         <div class="service-card">
           <div class="service-icon">◉</div>
-          <h3>Lifestyle & Brand</h3>
-          <p>Authentic lifestyle imagery for personal brands, entrepreneurs, and small businesses.</p>
-          <p class="price">from $400</p>
+          <h3 data-i18n="services.lifestyle.title">Lifestyle &amp; Brand</h3>
+          <p data-i18n="services.lifestyle.text">Authentic lifestyle imagery for personal brands, entrepreneurs, and small businesses.</p>
+          <p class="price" data-i18n="services.lifestyle.price">from $400</p>
         </div>
       </div>
     </div>
@@ -159,31 +172,31 @@
   <!-- Testimonials -->
   <section id="testimonials">
     <div class="container">
-      <span class="section-label center">Kind words</span>
+      <span class="section-label center" data-i18n="testimonials.label">Kind words</span>
       <div class="testimonials-slider">
         <div class="testimonial active">
-          <blockquote>
+          <blockquote data-i18n="testimonials.1.quote">
             "Diana has an incredible eye and an even warmer heart. Our wedding photos are beyond anything we imagined. We felt so comfortable the entire day."
           </blockquote>
-          <cite>— Sophie &amp; Luca, married 2024</cite>
+          <cite data-i18n="testimonials.1.cite">— Sophie &amp; Luca, married 2024</cite>
         </div>
         <div class="testimonial">
-          <blockquote>
+          <blockquote data-i18n="testimonials.2.quote">
             "I've never felt confident in front of a camera before, but Diana put me completely at ease. The portraits she delivered were stunning."
           </blockquote>
-          <cite>— Mia K., portrait client</cite>
+          <cite data-i18n="testimonials.2.cite">— Mia K., portrait client</cite>
         </div>
         <div class="testimonial">
-          <blockquote>
+          <blockquote data-i18n="testimonials.3.quote">
             "Professional, creative, and incredibly talented. Diana understood our brand vision immediately and delivered images that elevated our whole identity."
           </blockquote>
-          <cite>— Aria Studio, brand client</cite>
+          <cite data-i18n="testimonials.3.cite">— Aria Studio, brand client</cite>
         </div>
       </div>
       <div class="testimonial-dots">
-        <button class="dot active" data-index="0" aria-label="Testimonial 1"></button>
-        <button class="dot" data-index="1" aria-label="Testimonial 2"></button>
-        <button class="dot" data-index="2" aria-label="Testimonial 3"></button>
+        <button class="dot active" data-index="0" aria-label="Testimonial 1" data-i18n-aria="testimonials.dot1"></button>
+        <button class="dot" data-index="1" aria-label="Testimonial 2" data-i18n-aria="testimonials.dot2"></button>
+        <button class="dot" data-index="2" aria-label="Testimonial 3" data-i18n-aria="testimonials.dot3"></button>
       </div>
     </div>
   </section>
@@ -192,12 +205,12 @@
   <section id="contact">
     <div class="container contact-grid">
       <div class="contact-info">
-        <span class="section-label">Get in touch</span>
-        <h2>Let's create something beautiful together</h2>
-        <p>Have a project in mind or just want to say hello? Fill in the form and I'll get back to you within 48 hours.</p>
+        <span class="section-label" data-i18n="contact.label">Get in touch</span>
+        <h2 data-i18n="contact.title">Let's create something beautiful together</h2>
+        <p data-i18n="contact.text">Have a project in mind or just want to say hello? Fill in the form and I'll get back to you within 48 hours.</p>
         <ul class="contact-details">
           <li>
-            <strong>Email</strong>
+            <strong data-i18n="contact.emailLabel">Email</strong>
             <a href="mailto:hello@studiodiana.com">hello@studiodiana.com</a>
           </li>
           <li>
@@ -205,35 +218,35 @@
             <a href="#" target="_blank" rel="noopener">@studiodiana</a>
           </li>
           <li>
-            <strong>Location</strong>
-            <span>Available worldwide</span>
+            <strong data-i18n="contact.locationLabel">Location</strong>
+            <span data-i18n="contact.locationValue">Available worldwide</span>
           </li>
         </ul>
       </div>
       <form class="contact-form" id="contact-form" novalidate>
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <label for="name" data-i18n="form.name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email" data-i18n="form.email">Email</label>
           <input type="email" id="email" name="email" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label for="service">Service</label>
+          <label for="service" data-i18n="form.service">Service</label>
           <select id="service" name="service">
-            <option value="">Select a service…</option>
-            <option value="portrait">Portrait Session</option>
-            <option value="wedding">Wedding Coverage</option>
-            <option value="lifestyle">Lifestyle &amp; Brand</option>
-            <option value="other">Other</option>
+            <option value="" data-i18n="form.serviceDefault">Select a service…</option>
+            <option value="portrait" data-i18n="form.servicePortrait">Portrait Session</option>
+            <option value="wedding" data-i18n="form.serviceWedding">Wedding Coverage</option>
+            <option value="lifestyle" data-i18n="form.serviceLifestyle">Lifestyle &amp; Brand</option>
+            <option value="other" data-i18n="form.serviceOther">Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          <label for="message" data-i18n="form.message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" data-i18n-placeholder="form.messagePlaceholder" required></textarea>
         </div>
-        <button type="submit" class="btn-solid full-width">Send Message</button>
+        <button type="submit" class="btn-solid full-width" data-i18n="form.submit">Send Message</button>
         <p class="form-notice" id="form-notice"></p>
       </form>
     </div>
@@ -243,7 +256,7 @@
   <footer>
     <div class="container footer-inner">
       <span class="footer-logo">Studio Diana</span>
-      <p class="footer-copy">&copy; <span id="year"></span> Studio Diana. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">Studio Diana. All rights reserved.</span></p>
       <div class="footer-social">
         <a href="#" aria-label="Instagram">Ig</a>
         <a href="#" aria-label="Facebook">Fb</a>
@@ -252,6 +265,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -146,6 +146,15 @@ startAutoSlide();
 const form       = document.getElementById('contact-form');
 const formNotice = document.getElementById('form-notice');
 
+const translate = key => (window.i18n ? window.i18n.t(key) : key);
+
+// data-i18n makes the notice follow the language switch while it is on screen
+function showNotice(key, color) {
+  formNotice.dataset.i18n = key;
+  formNotice.textContent  = translate(key);
+  formNotice.style.color  = color;
+}
+
 form.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -154,14 +163,12 @@ form.addEventListener('submit', e => {
   const message = form.message.value.trim();
 
   if (!name || !email || !message) {
-    formNotice.textContent = 'Please fill in all required fields.';
-    formNotice.style.color = '#c0392b';
+    showNotice('form.error', '#c0392b');
     return;
   }
 
   // GitHub Pages is static — show a friendly message instead of a real submit
-  formNotice.textContent = 'Thank you! I\'ll be in touch within 48 hours.';
-  formNotice.style.color = '#c8a97e';
+  showNotice('form.success', '#c8a97e');
   form.reset();
 });
 
